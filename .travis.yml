@@ -1,0 +1,7 @@
+language: python
+python:
+  - "3.12"
+script: python -m pytest -s
+branches:
+  only:
+    - master
