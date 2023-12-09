@@ -72,3 +72,10 @@ def test_day08():
         assert d.solve(f)[0] == 6
     with open('input/day08.test3') as f:
         assert d.solve(f)[1] == 6
+
+
+def test_day09():
+    log.info("Test Day9")
+    d = days.day09
+    with open('input/day09.test') as f:
+        assert d.solve(f) == (114, 2)
