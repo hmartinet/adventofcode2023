@@ -19,6 +19,8 @@ def test_day01():
         # The right calibration values for string
         # "eighthree" is 83 and for "sevenine" is 79.
         assert d.solve(f)[1] == 162
+    with open('input/day01') as f:
+        assert d.solve(f) == (54953, 53868)
 
 
 def test_day02():
@@ -26,6 +28,8 @@ def test_day02():
     d = days.day02
     with open('input/day02.test') as f:
         assert d.solve(f) == (8, 2286)
+    with open('input/day02') as f:
+        assert d.solve(f) == (2207, 62241)
 
 
 def test_day03():
@@ -33,6 +37,8 @@ def test_day03():
     d = days.day03
     with open('input/day03.test') as f:
         assert d.solve(f) == (4361, 467835)
+    with open('input/day03') as f:
+        assert d.solve(f) == (520019, 75519888)
 
 
 def test_day04():
@@ -40,6 +46,8 @@ def test_day04():
     d = days.day04
     with open('input/day04.test') as f:
         assert d.solve(f) == (13, 30)
+    with open('input/day04') as f:
+        assert d.solve(f) == (26346, 8467762)
 
 
 def test_day05():
@@ -47,6 +55,8 @@ def test_day05():
     d = days.day05
     with open('input/day05.test') as f:
         assert d.solve(f) == (35, 46)
+    with open('input/day05') as f:
+        assert d.solve(f) == (322500873, 108956227)
 
 
 def test_day06():
@@ -54,6 +64,8 @@ def test_day06():
     d = days.day06
     with open('input/day06.test') as f:
         assert d.solve(f) == (288, 71503)
+    with open('input/day06') as f:
+        assert d.solve(f) == (219849, 29432455)
 
 
 def test_day07():
@@ -61,6 +73,8 @@ def test_day07():
     d = days.day07
     with open('input/day07.test') as f:
         assert d.solve(f) == (6440, 5905)
+    with open('input/day07') as f:
+        assert d.solve(f) == (248217452, 245576185)
 
 
 def test_day08():
@@ -72,6 +86,8 @@ def test_day08():
         assert d.solve(f)[0] == 6
     with open('input/day08.test3') as f:
         assert d.solve(f)[1] == 6
+    with open('input/day08') as f:
+        assert d.solve(f) == (20513, 15995167053923)
 
 
 def test_day09():
@@ -79,3 +95,22 @@ def test_day09():
     d = days.day09
     with open('input/day09.test') as f:
         assert d.solve(f) == (114, 2)
+    with open('input/day09') as f:
+        assert d.solve(f) == (1647269739, 864)
+
+
+def test_day10():
+    log.info("Test Day10")
+    d = days.day10
+    with open('input/day10.test1') as f:
+        assert d.solve(f)[0] == 4
+    with open('input/day10.test2') as f:
+        assert d.solve(f)[0] == 4
+    with open('input/day10.test3') as f:
+        assert d.solve(f)[1] == 4
+    with open('input/day10.test4') as f:
+        assert d.solve(f)[1] == 8
+    with open('input/day10.test5') as f:
+        assert d.solve(f)[1] == 10
+    with open('input/day10') as f:
+        assert d.solve(f) == (6754, 567)
