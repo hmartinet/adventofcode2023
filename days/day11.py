@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 
 def solve(din, e=1000000):
     data = [list(r) for r in din.read().splitlines()]
