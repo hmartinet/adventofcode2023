@@ -10,6 +10,7 @@ from . import (
     day09,
     day10,
     day11,
+    day12,
 )
 
 __all__ = [
@@ -24,4 +25,5 @@ __all__ = [
     'day09',
     'day10',
     'day11',
+    'day12',
 ]
