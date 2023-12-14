@@ -134,3 +134,21 @@ def test_day12():
         assert d.solve(f) == (21, 525152)
     with open('input/day12') as f:
         assert d.solve(f) == (8419, 160500973317706)
+
+
+def test_day13():
+    log.info("Test Day13")
+    d = days.day13
+    with open('input/day13.test') as f:
+        assert d.solve(f) == (405, 400)
+    with open('input/day13') as f:
+        assert d.solve(f) == (31739, 31539)
+
+
+def test_day14():
+    log.info("Test Day14")
+    d = days.day14
+    with open('input/day14.test') as f:
+        assert d.solve(f) == (136, 64)
+    with open('input/day14') as f:
+        assert d.solve(f) == (107951, 95736)
