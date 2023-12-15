@@ -2,7 +2,7 @@
 
 import logging
 
-from . import days
+import days
 
 logging.basicConfig(level=logging.DEBUG)
 log = logging.getLogger('tests')
@@ -157,7 +157,7 @@ def test_day14():
 def test_day15():
     log.info("Test Day15")
     d = days.day15
-    assert d.hash('HASH') == 52
+    assert d.h('HASH') == 52
     with open('input/day15.test') as f:
         assert d.solve(f)[1] == 145
     with open('input/day15') as f:

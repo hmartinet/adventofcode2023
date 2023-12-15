@@ -1,24 +1,19 @@
-from collections import OrderedDict
+from collections import OrderedDict as odict
 from functools import cache
 
+from tools import cmap
 
-@cache
-def hash(s, r=0):
-    for c in s:
-        r = ((r + ord(c)) * 17) % 256
-    return r
+h = cache(lambda s: cmap(s, lambda r, c: ((r + ord(c)) * 17) % 256))
 
 
 def solve(din):
-    def oper(s):
-        sl = lambda b, l: b.setdefault(hash(l), OrderedDict())
+    def op(s):
+        sl = lambda b, l: b.setdefault(h(l) + 1, odict())
         return [lambda: lambda b: sl(b, s[:-2]).update({s[:-2]: int(s[-1:])}),
                 lambda: lambda b: sl(b, s[:-1]).pop(s[:-1], None)]['-' in s]()
 
-    seq = din.read().strip().split(',')
-    r1, r2 = sum(map(hash, seq)), 0
-    boxes = {}; [op(boxes) for op in map(oper, seq)]
-    for i in sorted(boxes.keys()):
-        for k, v in enumerate(boxes[i].items()):
-            r2 += (i + 1) * (k + 1) * v[1]
-    return r1, r2
+    seq, b = din.read().strip().split(','), {}
+    [o(b) for o in map(op, seq)]
+    return sum(map(h, seq)), sum([
+        i * k * v[1] for i in sorted(b.keys())
+        for k, v in enumerate(b[i].items(), 1)])
