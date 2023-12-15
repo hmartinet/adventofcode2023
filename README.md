@@ -5,3 +5,16 @@
 
 
 This repository contains my personnal Python 3 solutions for the [Advent of Code](http://adventofcode.com/).
+
+To run all days
+
+    ./aoc.py
+
+Tu run a specific day
+
+    ./aoc.py $DAY < $INPUT_FILE
+
+For instance
+
+    ./aoc.py 01 < input/day01.test1
+    ./aoc.py 01 < input/day01
