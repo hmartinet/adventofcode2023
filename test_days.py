@@ -152,3 +152,13 @@ def test_day14():
         assert d.solve(f) == (136, 64)
     with open('input/day14') as f:
         assert d.solve(f) == (107951, 95736)
+
+
+def test_day15():
+    log.info("Test Day15")
+    d = days.day15
+    assert d.hash('HASH') == 52
+    with open('input/day15.test') as f:
+        assert d.solve(f)[1] == 145
+    with open('input/day15') as f:
+        assert d.solve(f) == (511257, 239484)
