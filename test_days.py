@@ -191,3 +191,12 @@ def test_day18():
         assert d.solve(f) == (62, 952408144115)
     with open('input/day18') as f:
         assert d.solve(f) == (36807, 48797603984357)
+
+
+def test_day19():
+    log.info("Test Day19")
+    d = days.day19
+    with open('input/day19.test') as f:
+        assert d.solve(f) == (19114, 167409079868000)
+    with open('input/day19') as f:
+        assert d.solve(f) == (449531, 122756210763577)
